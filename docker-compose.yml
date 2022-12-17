@@ -55,6 +55,7 @@ services:
     volumes:
       - .:/opt/node/app
       - /opt/node/app/node_modules
+      - p5js:/mnt/p5js
     ports:
       - '8000:8000'
       - '8002:8002'
@@ -62,3 +63,5 @@ services:
       - mongo
 volumes:
   dbdata:
+  p5js_data:
+    external: true
